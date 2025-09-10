@@ -45,7 +45,7 @@
   <div class="container">
     <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
       <div class="col-md-9 ftco-animate pb-5 text-center">
-       <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Trang chủ <i class="fa fa-chevron-right"></i></a></span> <span>Blog <i class="fa fa-chevron-right"></i></span></p>
+       <p class="breadcrumbs"><span class="mr-2"><a href="index.jsp">Trang chủ <i class="fa fa-chevron-right"></i></a></span> <span>Blog <i class="fa fa-chevron-right"></i></span></p>
        <h1 class="mb-0 bread">Blog</h1>
      </div>
    </div>
@@ -57,7 +57,7 @@
     <div class="row d-flex">
       <div class="col-md-4 d-flex ftco-animate">
        <div class="blog-entry justify-content-end">
-        <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');"></a>
+        <a href="blog-single.jsp" class="block-20" style="background-image: url('images/image_1.jpg');"></a>
         <div class="text">
          <div class="d-flex align-items-center mb-4 topp">
           <div class="one"><span class="day">11</span></div>
@@ -65,13 +65,13 @@
          </div>
          <h3 class="heading"><a href="#">Địa điểm nổi tiếng nhất thế giới</a></h3>
          <p>Một con sông nhỏ tên là Duden chảy qua nơi họ ở và cung cấp những điều cần thiết.</p>
-         <p><a href="blog-single.html" class="btn btn-primary">Đọc thêm</a></p>
+         <p><a href="blog-single.jsp" class="btn btn-primary">Đọc thêm</a></p>
        </div>
      </div>
    </div>
    <div class="col-md-4 d-flex ftco-animate">
      <div class="blog-entry justify-content-end">
-      <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');"></a>
+      <a href="blog-single.jsp" class="block-20" style="background-image: url('images/image_2.jpg');"></a>
       <div class="text">
        <div class="d-flex align-items-center mb-4 topp">
         <div class="one"><span class="day">11</span></div>
@@ -79,13 +79,13 @@
        </div>
        <h3 class="heading"><a href="#">Địa điểm nổi tiếng nhất thế giới</a></h3>
        <p>Một con sông nhỏ tên là Duden chảy qua nơi họ ở và cung cấp những điều cần thiết.</p>
-       <p><a href="blog-single.html" class="btn btn-primary">Đọc thêm</a></p>
+       <p><a href="blog-single.jsp" class="btn btn-primary">Đọc thêm</a></p>
      </div>
     </div>
    </div>
    <div class="col-md-4 d-flex ftco-animate">
      <div class="blog-entry">
-      <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');"></a>
+      <a href="blog-single.jsp" class="block-20" style="background-image: url('images/image_3.jpg');"></a>
       <div class="text">
        <div class="d-flex align-items-center mb-4 topp">
         <div class="one"><span class="day">11</span></div>
@@ -93,7 +93,7 @@
        </div>
        <h3 class="heading"><a href="#">Địa điểm nổi tiếng nhất thế giới</a></h3>
        <p>Một con sông nhỏ tên là Duden chảy qua nơi họ ở và cung cấp những điều cần thiết.</p>
-       <p><a href="blog-single.html" class="btn btn-primary">Đọc thêm</a></p>
+       <p><a href="blog-single.jsp" class="btn btn-primary">Đọc thêm</a></p>
      </div>
     </div>
    </div>
@@ -213,3 +213,4 @@
 <script src="js/main.js"></script>
 
 </body>
+</html>

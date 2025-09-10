@@ -656,7 +656,7 @@
                     </div>
                     <div class="col-md-4 d-flex ftco-animate">
                         <div class="blog-entry justify-content-end">
-                            <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+                            <a href="blog-single.jsp" class="block-20" style="background-image: url('images/image_2.jpg');">
                             </a>
                             <div class="text">
                                 <div class="d-flex align-items-center mb-4 topp">
@@ -676,7 +676,7 @@
                     </div>
                     <div class="col-md-4 d-flex ftco-animate">
                         <div class="blog-entry">
-                            <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+                            <a href="blog-single.jsp" class="block-20" style="background-image: url('images/image_3.jpg');">
                             </a>
                             <div class="text">
                                 <div class="d-flex align-items-center mb-4 topp">
