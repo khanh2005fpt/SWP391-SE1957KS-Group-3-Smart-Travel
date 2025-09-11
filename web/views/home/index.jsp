@@ -2,206 +2,206 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <html lang="vi">
-<head>
-    <title>Smart Ticket Booking</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+    <head>
+        <title>Smart Ticket Booking</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+        <link rel="stylesheet" href="css/animate.css">
 
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <%@ include file="common/navbar.jsp" %>
-    <!-- KẾT THÚC nav -->
-    
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_5.jpg');">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
-                <div class="col-md-7 ftco-animate">
-                    <span class="subheading">Chào mừng đến với Pacific</span>
-                    <h1 class="mb-4">Khám phá điểm đến yêu thích của bạn cùng chúng tôi</h1>
-                    <p class="caps">Du lịch đến bất kỳ nơi nào trên thế giới, mà không cần phải đi vòng quanh</p>
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+
+        <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+        <link rel="stylesheet" href="css/flaticon.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <%@ include file="/views/common/navbar.jsp" %>
+        <!-- KẾT THÚC nav -->
+
+        <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_5.jpg');">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
+                    <div class="col-md-7 ftco-animate">
+                        <span class="subheading">Chào mừng đến với Pacific</span>
+                        <h1 class="mb-4">Khám phá điểm đến yêu thích của bạn cùng chúng tôi</h1>
+                        <p class="caps">Du lịch đến bất kỳ nơi nào trên thế giới, mà không cần phải đi vòng quanh</p>
+                    </div>
+                    <a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
+                        <span class="fa fa-play"></span>
+                    </a>
                 </div>
-                <a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
-                    <span class="fa fa-play"></span>
-                </a>
             </div>
         </div>
-    </div>
 
-    <section class="ftco-section ftco-no-pb ftco-no-pt">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="ftco-search d-flex justify-content-center">
-                        <div class="row">
-                            <div class="col-md-12 nav-link-wrap">
-                                <div class="nav nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                    <a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Tìm kiếm Tour</a>
+        <section class="ftco-section ftco-no-pb ftco-no-pt">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="ftco-search d-flex justify-content-center">
+                            <div class="row">
+                                <div class="col-md-12 nav-link-wrap">
+                                    <div class="nav nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                        <a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Tìm kiếm Tour</a>
 
-                                    <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Khách sạn</a>
+                                        <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Khách sạn</a>
 
-                                </div>
-                            </div>
-                            <div class="col-md-12 tab-wrap">
-                                
-                                <div class="tab-content" id="v-pills-tabContent">
-
-                                    <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
-                                        <form action="#" class="search-property-1">
-                                            <div class="row no-gutters">
-                                                <div class="col-md d-flex">
-                                                    <div class="form-group p-4 border-0">
-                                                        <label for="#">Điểm đến</label>
-                                                        <div class="form-field">
-                                                            <div class="icon"><span class="fa fa-search"></span></div>
-                                                            <input type="text" class="form-control" placeholder="Tìm kiếm địa điểm">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md d-flex">
-                                                    <div class="form-group p-4">
-                                                        <label for="#">Ngày nhận phòng</label>
-                                                        <div class="form-field">
-                                                            <div class="icon"><span class="fa fa-calendar"></span></div>
-                                                            <input type="text" class="form-control checkin_date" placeholder="Ngày nhận phòng">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md d-flex">
-                                                    <div class="form-group p-4">
-                                                        <label for="#">Ngày trả phòng</label>
-                                                        <div class="form-field">
-                                                            <div class="icon"><span class="fa fa-calendar"></span></div>
-                                                            <input type="text" class="form-control checkout_date" placeholder="Ngày trả phòng">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md d-flex">
-                                                    <div class="form-group p-4">
-                                                        <label for="#">Giới hạn giá</label>
-                                                        <div class="form-field">
-                                                            <div class="select-wrap">
-                                                                <div class="icon"><span class="fa fa-chevron-down"></span></div>
-                                                                <select name="" id="" class="form-control">
-                                                                    <option value="">$100</option>
-                                                                    <option value="">$10,000</option>
-                                                                    <option value="">$50,000</option>
-                                                                    <option value="">$100,000</option>
-                                                                    <option value="">$200,000</option>
-                                                                    <option value="">$300,000</option>
-                                                                    <option value="">$400,000</option>
-                                                                    <option value="">$500,000</option>
-                                                                    <option value="">$600,000</option>
-                                                                    <option value="">$700,000</option>
-                                                                    <option value="">$800,000</option>
-                                                                    <option value="">$900,000</option>
-                                                                    <option value="">$1,000,000</option>
-                                                                    <option value="">$2,000,000</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md d-flex">
-                                                    <div class="form-group d-flex w-100 border-0">
-                                                        <div class="form-field w-100 align-items-center d-flex">
-                                                            <input type="submit" value="Tìm kiếm" class="align-self-stretch form-control btn btn-primary">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
                                     </div>
+                                </div>
+                                <div class="col-md-12 tab-wrap">
 
-                                    <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">
-                                        <form action="#" class="search-property-1">
-                                            <div class="row no-gutters">
-                                                <div class="col-lg d-flex">
-                                                    <div class="form-group p-4 border-0">
-                                                        <label for="#">Điểm đến</label>
-                                                        <div class="form-field">
-                                                            <div class="icon"><span class="fa fa-search"></span></div>
-                                                            <input type="text" class="form-control" placeholder="Tìm kiếm địa điểm">
+                                    <div class="tab-content" id="v-pills-tabContent">
+
+                                        <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
+                                            <form action="#" class="search-property-1">
+                                                <div class="row no-gutters">
+                                                    <div class="col-md d-flex">
+                                                        <div class="form-group p-4 border-0">
+                                                            <label for="#">Điểm đến</label>
+                                                            <div class="form-field">
+                                                                <div class="icon"><span class="fa fa-search"></span></div>
+                                                                <input type="text" class="form-control" placeholder="Tìm kiếm địa điểm">
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-lg d-flex">
-                                                    <div class="form-group p-4">
-                                                        <label for="#">Ngày nhận phòng</label>
-                                                        <div class="form-field">
-                                                            <div class="icon"><span class="fa fa-calendar"></span></div>
-                                                            <input type="text" class="form-control checkin_date" placeholder="Ngày nhận phòng">
+                                                    <div class="col-md d-flex">
+                                                        <div class="form-group p-4">
+                                                            <label for="#">Ngày nhận phòng</label>
+                                                            <div class="form-field">
+                                                                <div class="icon"><span class="fa fa-calendar"></span></div>
+                                                                <input type="text" class="form-control checkin_date" placeholder="Ngày nhận phòng">
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-lg d-flex">
-                                                    <div class="form-group p-4">
-                                                        <label for="#">Ngày trả phòng</label>
-                                                        <div class="form-field">
-                                                            <div class="icon"><span class="fa fa-calendar"></span></div>
-                                                            <input type="text" class="form-control checkout_date" placeholder="Ngày trả phòng">
+                                                    <div class="col-md d-flex">
+                                                        <div class="form-group p-4">
+                                                            <label for="#">Ngày trả phòng</label>
+                                                            <div class="form-field">
+                                                                <div class="icon"><span class="fa fa-calendar"></span></div>
+                                                                <input type="text" class="form-control checkout_date" placeholder="Ngày trả phòng">
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-lg d-flex">
-                                                    <div class="form-group p-4">
-                                                        <label for="#">Giới hạn giá</label>
-                                                        <div class="form-field">
-                                                            <div class="select-wrap">
-                                                                <div class=" Sedan"><span class="fa fa-chevron-down"></span></div>
-                                                                <select name="" id="" class="form-control">
-                                                                    <option value="">$100</option>
-                                                                    <option value="">$10,000</option>
-                                                                    <option value="">$50,000</option>
-                                                                    <option value="">$100,000</option>
-                                                                    <option value="">$200,000</option>
-                                                                    <option value="">$300,000</option>
-                                                                    <option value="">$400,000</option>
-                                                                    <option value="">$500,000</option>
-                                                                    <option value="">$600,000</option>
-                                                                    <option value="">$700,000</option>
-                                                                    <option value="">$800,000</option>
-                                                                    <option value="">$900,000</option>
-                                                                    <option value="">$1,000,000</option>
-                                                                    <option value="">$2,000,000</option>
-                                                                </select>
+                                                    <div class="col-md d-flex">
+                                                        <div class="form-group p-4">
+                                                            <label for="#">Giới hạn giá</label>
+                                                            <div class="form-field">
+                                                                <div class="select-wrap">
+                                                                    <div class="icon"><span class="fa fa-chevron-down"></span></div>
+                                                                    <select name="" id="" class="form-control">
+                                                                        <option value="">$100</option>
+                                                                        <option value="">$10,000</option>
+                                                                        <option value="">$50,000</option>
+                                                                        <option value="">$100,000</option>
+                                                                        <option value="">$200,000</option>
+                                                                        <option value="">$300,000</option>
+                                                                        <option value="">$400,000</option>
+                                                                        <option value="">$500,000</option>
+                                                                        <option value="">$600,000</option>
+                                                                        <option value="">$700,000</option>
+                                                                        <option value="">$800,000</option>
+                                                                        <option value="">$900,000</option>
+                                                                        <option value="">$1,000,000</option>
+                                                                        <option value="">$2,000,000</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md d-flex">
+                                                        <div class="form-group d-flex w-100 border-0">
+                                                            <div class="form-field w-100 align-items-center d-flex">
+                                                                <input type="submit" value="Tìm kiếm" class="align-self-stretch form-control btn btn-primary">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg d-flex">
-                                                    <div class="form-group d-flex w-100 border-0">
-                                                        <div class="form-field w-100 align-items-center d-flex">
-                                                            <input type="submit" value="Tìm kiếm" class="align-self-stretch form-control btn btn-primary p-0">
+                                            </form>
+                                        </div>
+
+                                        <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">
+                                            <form action="#" class="search-property-1">
+                                                <div class="row no-gutters">
+                                                    <div class="col-lg d-flex">
+                                                        <div class="form-group p-4 border-0">
+                                                            <label for="#">Điểm đến</label>
+                                                            <div class="form-field">
+                                                                <div class="icon"><span class="fa fa-search"></span></div>
+                                                                <input type="text" class="form-control" placeholder="Tìm kiếm địa điểm">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg d-flex">
+                                                        <div class="form-group p-4">
+                                                            <label for="#">Ngày nhận phòng</label>
+                                                            <div class="form-field">
+                                                                <div class="icon"><span class="fa fa-calendar"></span></div>
+                                                                <input type="text" class="form-control checkin_date" placeholder="Ngày nhận phòng">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg d-flex">
+                                                        <div class="form-group p-4">
+                                                            <label for="#">Ngày trả phòng</label>
+                                                            <div class="form-field">
+                                                                <div class="icon"><span class="fa fa-calendar"></span></div>
+                                                                <input type="text" class="form-control checkout_date" placeholder="Ngày trả phòng">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg d-flex">
+                                                        <div class="form-group p-4">
+                                                            <label for="#">Giới hạn giá</label>
+                                                            <div class="form-field">
+                                                                <div class="select-wrap">
+                                                                    <div class=" Sedan"><span class="fa fa-chevron-down"></span></div>
+                                                                    <select name="" id="" class="form-control">
+                                                                        <option value="">$100</option>
+                                                                        <option value="">$10,000</option>
+                                                                        <option value="">$50,000</option>
+                                                                        <option value="">$100,000</option>
+                                                                        <option value="">$200,000</option>
+                                                                        <option value="">$300,000</option>
+                                                                        <option value="">$400,000</option>
+                                                                        <option value="">$500,000</option>
+                                                                        <option value="">$600,000</option>
+                                                                        <option value="">$700,000</option>
+                                                                        <option value="">$800,000</option>
+                                                                        <option value="">$900,000</option>
+                                                                        <option value="">$1,000,000</option>
+                                                                        <option value="">$2,000,000</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg d-flex">
+                                                        <div class="form-group d-flex w-100 border-0">
+                                                            <div class="form-field w-100 align-items-center d-flex">
+                                                                <input type="submit" value="Tìm kiếm" class="align-self-stretch form-control btn btn-primary p-0">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </form>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
 
         <section class="ftco-section services-section">
@@ -213,7 +213,7 @@
                             <h2 class="mb-4">Đã đến lúc bắt đầu cuộc phiêu lưu của bạn</h2>
                             <p>Một con sông nhỏ tên là Duden chảy qua nơi họ ở và cung cấp cho nó những điều cần thiết. Đó là một đất nước tuyệt vời, nơi những câu văn được nướng chín bay vào miệng bạn.</p>
                             <p>Xa xa, phía sau những ngọn núi chữ, xa các quốc gia Vokalia và Consonantia, có những văn bản mù. Họ sống tách biệt ở Bookmarksgrove ngay tại bờ biển của Semantics, một đại dương ngôn ngữ rộng lớn.
-                            Một con sông nhỏ tên là Duden chảy qua nơi họ ở và cung cấp những điều cần thiết.</p>
+                                Một con sông nhỏ tên là Duden chảy qua nơi họ ở và cung cấp những điều cần thiết.</p>
                             <p><a href="#" class="btn btn-primary py-3 px-4">Tìm kiếm điểm đến</a></p>
                         </div>
                     </div>
@@ -445,7 +445,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section class="ftco-section ftco-about img" style="background-image: url(images/bg_4.jpg);">
             <div class="overlay"></div>
             <div class="container py-md-5">
@@ -695,91 +695,29 @@
             </div>
         </section>
 
-        <footer class="ftco-footer bg-bottom ftco-no-pt" style="background-image: url(images/bg_3.jpg);">
-            <div class="container">
-                <div class="row mb-5">
-                    <div class="col-md pt-5">
-                        <div class="ftco-footer-widget pt-md-5 mb-4">
-                            <h2 class="ftco-heading-2">Giới thiệu</h2>
-                            <p>Xa xa, phía sau những ngọn núi chữ, xa các quốc gia Vokalia và Consonantia, có những văn bản mù.</p>
-                            <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
-                                <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md pt-5 border-left">
-                        <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
-                            <h2 class="ftco-heading-2">Thông tin</h2>
-                            <ul class="list-unstyled">
-                                <li><a href="#" class="py-2 d-block">Yêu cầu trực tuyến</a></li>
-                                <li><a href="#" class="py-2 d-block">Yêu cầu chung</a></li>
-                                <li><a href="#" class="py-2 d-block">Điều kiện đặt vé</a></li>
-                                <li><a href="#" class="py-2 d-block">Chính sách bảo mật</a></li>
-                                <li><a href="#" class="py-2 d-block">Chính sách hoàn tiền</a></li>
-                                <li><a href="#" class="py-2 d-block">Liên hệ chúng tôi</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md pt-5 border-left">
-                        <div class="ftco-footer-widget pt-md-5 mb-4">
-                            <h2 class="ftco-heading-2">Trải nghiệm</h2>
-                            <ul class="list-unstyled">
-                                <li><a href="#" class="py-2 d-block">Phiêu lưu</a></li>
-                                <li><a href="#" class="py-2 d-block">Khách sạn và Nhà hàng</a></li>
-                                <li><a href="#" class="py-2 d-block">Bãi biển</a></li>
-                                <li><a href="#" class="py-2 d-block">Thiên nhiên</a></li>
-                                <li><a href="#" class="py-2 d-block">Cắm trại</a></li>
-                                <li><a href="#" class="py-2 d-block">Tiệc tùng</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md pt-5 border-left">
-                        <div class="ftco-footer-widget pt-md-5 mb-4">
-                            <h2 class="ftco-heading-2">Có câu hỏi?</h2>
-                            <div class="block-23 mb-3">
-                                <ul>
-                                    <li><span class="icon fa fa-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                                    <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-                                    <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">info@yourdomain.com</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 text-center">
-
-                        <p><!-- Liên kết về Colorlib không được xóa. Mẫu được cấp phép theo CC BY 3.0. -->
-                            Bản quyền &copy;<script>document.write(new Date().getFullYear());</script> Mọi quyền được bảo lưu | Mẫu này được tạo với <i class="fa fa-heart" aria-hidden="true"></i> bởi <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                            <!-- Liên kết về Colorlib không được xóa. Mẫu được cấp phép theo CC BY 3.0. --></p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            
-            
-
-            <!-- loader -->
-            <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+        <%@ include file="/views/common/footer.jsp" %>
 
 
-            <script src="js/jquery.min.js"></script>
-            <script src="js/jquery-migrate-3.0.1.min.js"></script>
-            <script src="js/popper.min.js"></script>
-            <script src="js/bootstrap.min.js"></script>
-            <script src="js/jquery.easing.1.3.js"></script>
-            <script src="js/jquery.waypoints.min.js"></script>
-            <script src="js/jquery.stellar.min.js"></script>
-            <script src="js/owl.carousel.min.js"></script>
-            <script src="js/jquery.magnific-popup.min.js"></script>
-            <script src="js/jquery.animateNumber.min.js"></script>
-            <script src="js/bootstrap-datepicker.js"></script>
-            <script src="js/scrollax.min.js"></script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-            <script src="js/google-map.js"></script>
-            <script src="js/main.js"></script>
-            
-        </body>
-        </html>
+
+        <!-- loader -->
+        <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-migrate-3.0.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/jquery.animateNumber.min.js"></script>
+        <script src="js/bootstrap-datepicker.js"></script>
+        <script src="js/scrollax.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+        <script src="js/google-map.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
