@@ -1,8 +1,3 @@
-<%-- 
-    Document   : navbar
-    Created on : Sep 11, 2025, 6:52:38 PM
-    Author     : Admin
---%>
 
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">

@@ -26,7 +26,7 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <%@ include file="navbar.jsp" %>
+        <%@ include file="common/navbar.jsp" %>
         <!-- END nav -->
 
         <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_1.jpg');">

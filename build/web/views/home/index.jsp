@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <%@ include file="navbar.jsp" %>
+    <%@ include file="common/navbar.jsp" %>
     <!-- KẾT THÚC nav -->
     
     <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_5.jpg');">
