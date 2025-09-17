@@ -288,7 +288,7 @@ VALUES
 ('quanghuy123', 'huyvipmn5', 'huynqhe182510@fpt.edu.vn', 'David Huy', '0982706236', 'CUSTOMER');
 
 --2.island
-
+select * from bookings
 INSERT INTO Islands (islandName, country, description, bestSeason, activities, imageUrl)
 VALUES
 ('Phu Quoc', 'Vietnam', 'Beautiful island with beaches', 'July-Apr', 'Swimming, Diving, Snorkeling', 'views/home/images/phuquoc.jpg'),
@@ -364,10 +364,10 @@ VALUES
 select * from bookings
 -- payments
 
-INSERT INTO Payments (bookingId, amount, method, status)
+INSERT INTO Payments (amount, method, status)
 VALUES
-(2, 613.400, 'VNPAY', 'SUCCESS'),
-(3, 421.210, 'PAYPAL', 'PENDING');
+(613.400, 'VNPAY', 'SUCCESS'),
+(421.210, 'PAYPAL', 'PENDING');
 select * from Payments
 -- Recommendations
 INSERT INTO Recommendations (userId, islandId, score)
