@@ -1,6 +1,6 @@
-﻿Create database smart_travel
+﻿Create database SmartTravelBooking
 go
-use smart_travel
+use SmartTravelBooking
 go
 -- Bảng Users
 CREATE TABLE Users (
@@ -107,6 +107,18 @@ CREATE TABLE IslandVehicles (
 );
 go
 
+--  Bảng Trips (gói tour tổng quan)
+CREATE TABLE Trips (
+    tripId INT IDENTITY(1,1) PRIMARY KEY,
+    tripName NVARCHAR(100) NOT NULL,
+    description NVARCHAR(MAX),
+    basePrice DECIMAL(10,3),          -- giá cơ bản của gói tour
+    startDate DATE,
+    endDate DATE,
+    createdAt DATETIME DEFAULT GETDATE()
+);
+go
+
 -- Bảng Bookings (đặt tour hoặc dịch vụ lẻ)
 CREATE TABLE Bookings (
     bookingId INT IDENTITY(1,1) PRIMARY KEY,
@@ -133,18 +145,6 @@ CREATE TABLE Payments (
     status VARCHAR(20) CHECK (status IN ('SUCCESS','FAILED','PENDING')) DEFAULT 'PENDING',
     transactionDate DATETIME DEFAULT GETDATE(),
     FOREIGN KEY (bookingId) REFERENCES Bookings(bookingId) ON DELETE CASCADE
-);
-go
-
---  Bảng Trips (gói tour tổng quan)
-CREATE TABLE Trips (
-    tripId INT IDENTITY(1,1) PRIMARY KEY,
-    tripName NVARCHAR(100) NOT NULL,
-    description NVARCHAR(MAX),
-    basePrice DECIMAL(10,3),          -- giá cơ bản của gói tour
-    startDate DATE,
-    endDate DATE,
-    createdAt DATETIME DEFAULT GETDATE()
 );
 go
 
@@ -303,7 +303,7 @@ VALUES
 (1, 'VARIA Hotel','Standard', 350.000, 20, 4.5),
 (1, 'Cape panwa','Deluxe', 734.129, 15, 4.0),
 (2, 'Mandarin Oriental','Standard King', 999.999, 10, 4.2);
-select * from Hotels
+
 
 -- vehicle to island
 INSERT INTO VehiclesToIsland (islandId, vehicleType, providerName, pricePerDay, capacity, description)
@@ -361,14 +361,20 @@ INSERT INTO Bookings
 VALUES
 (4, 'FLIGHT', 1, 1, '2025-11-01', '2025-11-03', 567.150, 'CONFIRMED'),
 (4, 'HOTEL', 2, 2, '2025-12-16', '2025-12-19', 380.000, 'PENDING');
-select * from bookings
+
 -- payments
 
 INSERT INTO Payments (amount, method, status)
 VALUES
+<<<<<<< HEAD
 (613.400, 'VNPAY', 'SUCCESS'),
 (421.210, 'PAYPAL', 'PENDING');
 select * from Payments
+=======
+(1, 613.400, 'VNPAY', 'SUCCESS'),
+(2, 421.210, 'PAYPAL', 'PENDING');
+
+>>>>>>> 4c1da6e3ee47ffa07c2c52db91feca2e9dfaaa05
 -- Recommendations
 INSERT INTO Recommendations (userId, islandId, score)
 VALUES
@@ -396,7 +402,7 @@ INSERT INTO Promotions (code, description, discountType, discountValue, startDat
 VALUES
 ('NEWYEAR2025', 'New Year 2025 Discount', 'PERCENT', 10.000, '2025-01-01', '2025-01-31'),
 ('HOLIDAY50', 'Holiday Discount', 'AMOUNT', 50.000, '2025-12-20', '2025-12-31');
-select * from Promotions
+
 -- user promotions
 INSERT INTO UserPromotions (userId, promoId)
 VALUES
@@ -405,25 +411,4 @@ VALUES
 
 
 -------------------------------------------------------------------------------------------------------
-
--- lấy để hiển thị giá phòng VN
-SELECT FORMAT(pricePerNight, 'N0', 'vi-VN') AS priceFormatted
-FROM Hotels;
-
-SELECT FORMAT(pricePerNight * 10000, 'N0') AS priceVND
-FROM Hotels;
---N0 → không có phần thập phân, sẽ hiển thị dạng 5.000.000. , Nhân 10000 → nếu bạn lưu giá theo triệu mà muốn hiển thị VND..
-----------------------
--- add , alter
-ALTER TABLE Flights
-ADD islandId INT;
-
- ALTER TABLE dbo.Promotions
-ALTER COLUMN discountValue DECIMAL(10,3)
-
--- resest id trong bảng
-
-DELETE FROM Bookings;  -- xóa toàn bộ dữ liệu
-DBCC CHECKIDENT ('Bookings', RESEED, 0);  -- reset IDENTITY về 0, lần insert tiếp theo sẽ là 1
-
 
