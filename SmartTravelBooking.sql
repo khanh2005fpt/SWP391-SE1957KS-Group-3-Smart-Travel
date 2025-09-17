@@ -357,18 +357,18 @@ VALUES
 -- bookings
 
 INSERT INTO Bookings 
-(userId, bookingType, refId, checkIn, checkOut, totalAmount, status)
+(userId, serviceType, refId, tripsId, checkIn, checkOut, totalAmount, status)
 VALUES
-(4, 'FLIGHT', 1, '2025-11-01', '2025-11-03', 567.150, 'CONFIRMED'),
-(4, 'HOTEL', 2, '2025-12-16', '2025-12-19', 380.000, 'PENDING');
-
+(4, 'FLIGHT', 1, 1, '2025-11-01', '2025-11-03', 567.150, 'CONFIRMED'),
+(4, 'HOTEL', 2, 2, '2025-12-16', '2025-12-19', 380.000, 'PENDING');
+select * from bookings
 -- payments
 
 INSERT INTO Payments (bookingId, amount, method, status)
 VALUES
-(1, 613.400, 'VNPAY', 'SUCCESS'),
-(2, 421.210, 'PAYPAL', 'PENDING');
-
+(2, 613.400, 'VNPAY', 'SUCCESS'),
+(3, 421.210, 'PAYPAL', 'PENDING');
+select * from Payments
 -- Recommendations
 INSERT INTO Recommendations (userId, islandId, score)
 VALUES
