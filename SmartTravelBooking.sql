@@ -324,7 +324,7 @@ INSERT INTO Flights (flightNumber, airlineId, departure, destination, destinatio
 VALUES
 ('VN123', 1, 'Hanoi', 'Phu Quoc', 1, '2025-10-20 08:00', '2025-10-20 10:00', 500.000),
 ('VJ456', 2, 'Ho Chi Minh', 'Phuket', 2, '2025-10-21 18:30', '2025-10-21 23:00', 850.000);
-
+select * from flights
 -- vehicle insland
 INSERT INTO IslandVehicles (islandId, companyName, vehicleType, modelName, pricePerDay, capacity)
 VALUES
@@ -364,17 +364,11 @@ VALUES
 
 -- payments
 
-INSERT INTO Payments (amount, method, status)
+INSERT INTO Payments (bookingId, amount, method, status)
 VALUES
-<<<<<<< HEAD
-(613.400, 'VNPAY', 'SUCCESS'),
-(421.210, 'PAYPAL', 'PENDING');
-select * from Payments
-=======
 (1, 613.400, 'VNPAY', 'SUCCESS'),
 (2, 421.210, 'PAYPAL', 'PENDING');
 
->>>>>>> 4c1da6e3ee47ffa07c2c52db91feca2e9dfaaa05
 -- Recommendations
 INSERT INTO Recommendations (userId, islandId, score)
 VALUES
