@@ -86,6 +86,48 @@ public class IslandDao extends DBContext {
         }
         return list;
     }
+    
+    public List<Island> getIslandsByPage(int page, int pageSize) {
+        List<Island> list = new ArrayList<>();
+        String sql = "Select * from Islands order by islandId offset ? rows fetch next ? rows only";
+
+        try {
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setInt(1, (page - 1) * pageSize); // OFFSET
+            ps.setInt(2, pageSize);              // FETCH NEXT
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new Island(
+                        rs.getInt("islandId"),
+                        rs.getString("islandName"),
+                        rs.getString("country"),
+                        rs.getString("description"),
+                        rs.getString("bestSeason"),
+                        rs.getString("activities"),
+                        rs.getString("imageUrl")
+                ));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return list;
+    }
+    
+    public int getTotalIslands() {
+        int total = 0;
+        String sql = "select count(*) from Islands";
+        try {
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                total = rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return total;
+    }
 
     public static void main(String[] args) {
         IslandDao id = new IslandDao();

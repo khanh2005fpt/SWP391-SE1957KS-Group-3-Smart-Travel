@@ -106,7 +106,7 @@
                 </div>
         </section>
 
-       
+
 
         <section class="ftco-section img ftco-select-destination" style="background-image: url(${pageContext.request.contextPath}/views/home/images/bg_3.jpg);">
             <div class="container">
@@ -216,8 +216,34 @@
                             </div>
                         </div>
                     </c:forEach>
-                </div>
+                    <!-- Pagination -->
+                  
 
+                </div>
+  <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center mt-4">
+                            <!-- Previous -->
+                            <c:if test="${currentPage > 1}">
+                                <li class="page-item">
+                                    <a class="page-link" href="?page=${currentPage - 1}&islandName=${param.islandName}&country=${param.country}&bestSeason=${param.bestSeason}">Previous</a>
+                                </li>
+                            </c:if>
+
+                            <!-- Các trang -->
+                            <c:forEach begin="1" end="${totalPages}" var="i">
+                                <li class="page-item ${i == currentPage ? 'active' : ''}">
+                                    <a class="page-link" href="?page=${i}&islandName=${param.islandName}&country=${param.country}&bestSeason=${param.bestSeason}">${i}</a>
+                                </li>
+                            </c:forEach>
+
+                            <!-- Next -->
+                            <c:if test="${currentPage < totalPages}">
+                                <li class="page-item">
+                                    <a class="page-link" href="?page=${currentPage + 1}&islandName=${param.islandName}&country=${param.country}&bestSeason=${param.bestSeason}">Next</a>
+                                </li>
+                            </c:if>
+                        </ul>
+                    </nav>
             </div>
         </section>
 
@@ -234,7 +260,7 @@
             </div>
         </section>
 
-       
+
 
         <section class="ftco-section">
             <div class="container">

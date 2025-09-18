@@ -8,7 +8,7 @@
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto align-items-center">
-                <li class="nav-item"><a href="${pageContext.request.contextPath}/ListIslandController" class="nav-link">Trang chủ</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/SearchIslandController" class="nav-link">Trang chủ</a></li>
                 <li class="nav-item"><a href="${pageContext.request.contextPath}/views/home/about.jsp" class="nav-link">Giới thiệu</a></li>
                 <li class="nav-item"><a href="${pageContext.request.contextPath}/views/home/destination.jsp" class="nav-link">Điểm đến</a></li>
                 <li class="nav-item"><a href="${pageContext.request.contextPath}/views/home/hotel.jsp" class="nav-link">Khách sạn</a></li>
