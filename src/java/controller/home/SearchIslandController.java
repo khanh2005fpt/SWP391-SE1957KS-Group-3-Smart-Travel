@@ -88,6 +88,9 @@ public class SearchIslandController extends HttpServlet {
         int fromIndex = (page - 1) * pageSize;
         int toIndex = Math.min(fromIndex + pageSize, list.size());
         List<Island> pagedList = new ArrayList<>();
+        if(list.size() < pageSize){
+            totalPages = 1;
+        }
         if (fromIndex <= toIndex) {
             pagedList = list.subList(fromIndex, toIndex);
         }
