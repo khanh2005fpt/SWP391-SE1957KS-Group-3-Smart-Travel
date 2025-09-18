@@ -33,149 +33,71 @@
                             <div class="row">
                                 <div class="col-md-12 nav-link-wrap">
                                     <div class="nav nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                        <a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Tìm kiếm Tour</a>
-
-                                        <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Khách sạn</a>
-
+                                        <a class="nav-link active mr-md-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1"
+                                           role="tab" aria-controls="v-pills-1" aria-selected="true">Tìm kiếm đảo</a>
                                     </div>
                                 </div>
                                 <div class="col-md-12 tab-wrap">
-
                                     <div class="tab-content" id="v-pills-tabContent">
 
-                                        <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
-                                            <form action="#" class="search-property-1">
+                                        <!-- Tab tìm kiếm đảo -->
+                                        <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel">
+                                            <form action="SearchIslandController" method="get" class="search-property-1">
                                                 <div class="row no-gutters">
-                                                    <div class="col-md d-flex">
-                                                        <div class="form-group p-4 border-0">
-                                                            <label for="#">Điểm đến</label>
-                                                            <div class="form-field">
-                                                                <div class="icon"><span class="fa fa-search"></span></div>
-                                                                <input type="text" class="form-control" placeholder="Tìm kiếm địa điểm">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md d-flex">
-                                                        <div class="form-group p-4">
-                                                            <label for="#">Ngày nhận phòng</label>
-                                                            <div class="form-field">
-                                                                <div class="icon"><span class="fa fa-calendar"></span></div>
-                                                                <input type="text" class="form-control checkin_date" placeholder="Ngày nhận phòng">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md d-flex">
-                                                        <div class="form-group p-4">
-                                                            <label for="#">Ngày trả phòng</label>
-                                                            <div class="form-field">
-                                                                <div class="icon"><span class="fa fa-calendar"></span></div>
-                                                                <input type="text" class="form-control checkout_date" placeholder="Ngày trả phòng">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md d-flex">
-                                                        <div class="form-group p-4">
-                                                            <label for="#">Giới hạn giá</label>
-                                                            <div class="form-field">
-                                                                <div class="select-wrap">
-                                                                    <div class="icon"><span class="fa fa-chevron-down"></span></div>
-                                                                    <select name="" id="" class="form-control">
-                                                                        <option value="">$100</option>
-                                                                        <option value="">$10,000</option>
-                                                                        <option value="">$50,000</option>
-                                                                        <option value="">$100,000</option>
-                                                                        <option value="">$200,000</option>
-                                                                        <option value="">$300,000</option>
-                                                                        <option value="">$400,000</option>
-                                                                        <option value="">$500,000</option>
-                                                                        <option value="">$600,000</option>
-                                                                        <option value="">$700,000</option>
-                                                                        <option value="">$800,000</option>
-                                                                        <option value="">$900,000</option>
-                                                                        <option value="">$1,000,000</option>
-                                                                        <option value="">$2,000,000</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md d-flex">
-                                                        <div class="form-group d-flex w-100 border-0">
-                                                            <div class="form-field w-100 align-items-center d-flex">
-                                                                <input type="submit" value="Tìm kiếm" class="align-self-stretch form-control btn btn-primary">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
 
-                                        <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">
-                                            <form action="#" class="search-property-1">
-                                                <div class="row no-gutters">
-                                                    <div class="col-lg d-flex">
+                                                    <!-- Tên đảo -->
+                                                    <div class="col-md d-flex">
                                                         <div class="form-group p-4 border-0">
-                                                            <label for="#">Điểm đến</label>
+                                                            <label for="islandName">Tên đảo</label>
                                                             <div class="form-field">
                                                                 <div class="icon"><span class="fa fa-search"></span></div>
-                                                                <input type="text" class="form-control" placeholder="Tìm kiếm địa điểm">
+                                                                <input type="text" name="islandName" id="islandName"
+                                                                       class="form-control" placeholder="Nhập tên đảo...">
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg d-flex">
+
+                                                    <!-- Quốc gia -->
+                                                    <div class="col-md d-flex">
                                                         <div class="form-group p-4">
-                                                            <label for="#">Ngày nhận phòng</label>
+                                                            <label for="country">Quốc gia</label>
                                                             <div class="form-field">
-                                                                <div class="icon"><span class="fa fa-calendar"></span></div>
-                                                                <input type="text" class="form-control checkin_date" placeholder="Ngày nhận phòng">
+                                                                <div class="icon"><span class="fa fa-globe"></span></div>
+                                                                <input type="text" name="country" id="country"
+                                                                       class="form-control" placeholder="Nhập quốc gia...">
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg d-flex">
+
+                                                    <!-- Mùa đẹp nhất -->
+                                                    <div class="col-md d-flex">
                                                         <div class="form-group p-4">
-                                                            <label for="#">Ngày trả phòng</label>
+                                                            <label for="bestSeason">Mùa đẹp nhất</label>
                                                             <div class="form-field">
-                                                                <div class="icon"><span class="fa fa-calendar"></span></div>
-                                                                <input type="text" class="form-control checkout_date" placeholder="Ngày trả phòng">
+                                                                <div class="icon"><span class="fa fa-sun"></span></div>
+                                                                <select name="bestSeason" id="bestSeason" class="form-control">
+                                                                    <option value="">--Chọn mùa--</option>
+                                                                    <option value="Xuân">Xuân</option>
+                                                                    <option value="Hạ">Hạ</option>
+                                                                    <option value="Thu">Thu</option>
+                                                                    <option value="Đông">Đông</option>
+                                                                </select>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg d-flex">
-                                                        <div class="form-group p-4">
-                                                            <label for="#">Giới hạn giá</label>
-                                                            <div class="form-field">
-                                                                <div class="select-wrap">
-                                                                    <div class=" Sedan"><span class="fa fa-chevron-down"></span></div>
-                                                                    <select name="" id="" class="form-control">
-                                                                        <option value="">$100</option>
-                                                                        <option value="">$10,000</option>
-                                                                        <option value="">$50,000</option>
-                                                                        <option value="">$100,000</option>
-                                                                        <option value="">$200,000</option>
-                                                                        <option value="">$300,000</option>
-                                                                        <option value="">$400,000</option>
-                                                                        <option value="">$500,000</option>
-                                                                        <option value="">$600,000</option>
-                                                                        <option value="">$700,000</option>
-                                                                        <option value="">$800,000</option>
-                                                                        <option value="">$900,000</option>
-                                                                        <option value="">$1,000,000</option>
-                                                                        <option value="">$2,000,000</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg d-flex">
+
+                                                    <!-- Submit -->
+                                                    <div class="col-md d-flex">
                                                         <div class="form-group d-flex w-100 border-0">
                                                             <div class="form-field w-100 align-items-center d-flex">
-                                                                <input type="submit" value="Tìm kiếm" class="align-self-stretch form-control btn btn-primary p-0">
+                                                                <input type="submit" value="Tìm kiếm"
+                                                                       class="align-self-stretch form-control btn btn-primary">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </form>
-                                        </div>
+                                        </div> <!-- end tab -->
                                     </div>
                                 </div>
                             </div>
@@ -184,62 +106,7 @@
                 </div>
         </section>
 
-        <section class="ftco-section services-section">
-            <div class="container">
-                <div class="row d-flex">
-                    <div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate d-flex align-items-center">
-                        <div class="w-100">
-                            <span class="subheading">Chào mừng đến với Pacific</span>
-                            <h2 class="mb-4">Đã đến lúc bắt đầu cuộc phiêu lưu của bạn</h2>
-                            <p>Một con sông nhỏ tên là Duden chảy qua nơi họ ở và cung cấp cho nó những điều cần thiết. Đó là một đất nước tuyệt vời, nơi những câu văn được nướng chín bay vào miệng bạn.</p>
-                            <p>Xa xa, phía sau những ngọn núi chữ, xa các quốc gia Vokalia và Consonantia, có những văn bản mù. Họ sống tách biệt ở Bookmarksgrove ngay tại bờ biển của Semantics, một đại dương ngôn ngữ rộng lớn.
-                                Một con sông nhỏ tên là Duden chảy qua nơi họ ở và cung cấp những điều cần thiết.</p>
-                            <p><a href="#" class="btn btn-primary py-3 px-4">Tìm kiếm điểm đến</a></p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                                <div class="services services-1 color-1 d-block img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/services-1.jpg);">
-                                    <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-paragliding"></span></div>
-                                    <div class="media-body">
-                                        <h3 class="heading mb-3">Hoạt động</h3>
-                                        <p>Một con sông nhỏ tên là Duden chảy qua nơi họ ở và cung cấp những điều cần thiết.</p>
-                                    </div>
-                                </div>      
-                            </div>
-                            <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                                <div class="services services-1 color-2 d-block img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/services-2.jpg);">
-                                    <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
-                                    <div class="media-body">
-                                        <h3 class="heading mb-3">Sắp xếp chuyến đi</h3>
-                                        <p>Một con sông nhỏ tên là Duden chảy qua nơi họ ở và cung cấp những điều cần thiết.</p>
-                                    </div>
-                                </div>    
-                            </div>
-                            <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                                <div class="services services-1 color-3 d-block img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/services-3.jpg);">
-                                    <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-tour-guide"></span></div>
-                                    <div class="media-body">
-                                        <h3 class="heading mb-3">Hướng dẫn viên riêng</h3>
-                                        <p>Một con sông nhỏ tên là Duden chảy qua nơi họ ở và cung cấp những điều cần thiết.</p>
-                                    </div>
-                                </div>      
-                            </div>
-                            <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                                <div class="services services-1 color-4 d-block img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/services-4.jpg);">
-                                    <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-map"></span></div>
-                                    <div class="media-body">
-                                        <h3 class="heading mb-3">Quản lý địa điểm</h3>
-                                        <p>Một con sông nhỏ tên là Duden chảy qua nơi họ ở và cung cấp những điều cần thiết.</p>
-                                    </div>
-                                </div>      
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+       
 
         <section class="ftco-section img ftco-select-destination" style="background-image: url(${pageContext.request.contextPath}/views/home/images/bg_3.jpg);">
             <div class="container">
@@ -320,19 +187,37 @@
                 </div>
                 <div class="row">
                     <c:forEach var="island" items="${islands}">
-                        <div class="col-md-4 ftco-animate">
-                            <div class="project-wrap">
-                                <a href="#" class="img" style="background-image: url('${pageContext.request.contextPath}/${island.imageUrl}');"></a>
-                                <div class="text p-4">
-                                    <h3><a href="#">${island.islandName}</a></h3>
-                                    <p class="location"><span class="fa fa-map-marker"></span> ${island.country}</p>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <!-- Ảnh -->
+                                <img src="${pageContext.request.contextPath}/${island.imageUrl}" 
+                                     class="card-img-top" alt="${island.islandName}" 
+                                     style="height: 200px; object-fit: cover;">
+
+                                <!-- Nội dung -->
+                                <div class="card-body">
+                                    <h5 class="card-title">${island.islandName}</h5>
+                                    <p class="card-text text-muted">
+                                        <i class="fa fa-map-marker"></i> Vị trí: ${island.country}
+                                    </p>
+                                    <p class="card-text">
+                                        <strong>Mùa tốt để tham gia:</strong> ${island.bestSeason}
+                                    </p>
+                                    <p class="card-text">
+                                        <strong>Hoạt động:</strong> ${island.activities}
+                                    </p>
+                                    <p class="card-text">${island.description}</p>
+                                </div>
+
+                                <!-- Footer -->
+                                <div class="card-footer bg-white border-0">
+                                    <a href="#" class="btn btn-primary btn-sm">Xem chi tiết</a>
                                 </div>
                             </div>
                         </div>
                     </c:forEach>
-
-
                 </div>
+
             </div>
         </section>
 
@@ -349,133 +234,7 @@
             </div>
         </section>
 
-        <section class="ftco-section ftco-about ftco-no-pt img">
-            <div class="container">
-                <div class="row d-flex">
-                    <div class="col-md-12 about-intro">
-                        <div class="row">
-                            <div class="col-md-6 d-flex align-items-stretch">
-                                <div class="img d-flex w-100 align-items-center justify-content-center" style="background-image:url(${pageContext.request.contextPath}/views/home/images/about-1.jpg);">
-                                </div>
-                            </div>
-                            <div class="col-md-6 pl-md-5 py-5">
-                                <div class="row justify-content-start pb-3">
-                                    <div class="col-md-12 heading-section ftco-animate">
-                                        <span class="subheading">Về Chúng Tôi</span>
-                                        <h2 class="mb-4">Làm cho chuyến du lịch của bạn trở nên đáng nhớ và an toàn cùng chúng tôi</h2>
-                                        <p>Xa xa, phía sau những ngọn núi chữ, xa các quốc gia Vokalia và Consonantia, có những văn bản mù. Họ sống tách biệt ở Bookmarksgrove ngay tại bờ biển của Semantics, một đại dương ngôn ngữ rộng lớn.</p>
-                                        <p><a href="#" class="btn btn-primary">Đặt điểm đến của bạn</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="ftco-section testimony-section bg-bottom" style="background-image: url(${pageContext.request.contextPath}/views/home/images/bg_1.jpg);">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row justify-content-center pb-4">
-                    <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-                        <span class="subheading">Phản hồi</span>
-                        <h2 class="mb-4">Phản hồi của Du khách</h2>
-                    </div>
-                </div>
-                <div class="row ftco-animate">
-                    <div class="col-md-12">
-                        <div class="carousel-testimony owl-carousel">
-                            <div class="item">
-                                <div class="testimony-wrap py-4">
-                                    <div class="text">
-                                        <p class="star">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </p>
-                                        <p class="mb-4">Xa xa, phía sau những ngọn núi chữ, xa các quốc gia Vokalia và Consonantia, có những văn bản mù.</p>
-                                        <div class="d-flex align-items-center">
-                                            <div class="user-img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/person_1.jpg)"></div>
-                                            <div class="pl-3">
-                                                <p class="name">Roger Scott</p>
-                                                <span class="position">Quản lý Tiếp thị</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="testimony-wrap py-4">
-                                    <div class="text">
-                                        <p class="star">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </p>
-                                        <p class="mb-4">Xa xa, phía sau những ngọn núi chữ, xa các quốc gia Vokalia và Consonantia, có những văn bản mù.</p>
-                                        <div class="d-flex align-items-center">
-                                            <div class="user-img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/person_2.jpg)"></div>
-                                            <div class="pl-3">
-                                                <p class="name">Roger Scott</p>
-                                                <span class="position">Quản lý Tiếp thị</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="testimony-wrap py-4">
-                                    <div class="text">
-                                        <p class="star">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </p>
-                                        <p class="mb-4">Xa xa, phía sau những ngọn núi chữ, xa các quốc gia Vokalia và Consonantia, có những văn bản mù.</p>
-                                        <div class="d-flex align-items-center">
-                                            <div class="user-img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/person_3.jpg)"></div>
-                                            <div class="pl-3">
-                                                <p class="name">Roger Scott</p>
-                                                <span class="position">Quản lý Tiếp thị</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          
-                            <div class="item">
-                                <div class="testimony-wrap py-4">
-                                    <div class="text">
-                                        <p class="star">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </p>
-                                        <p class="mb-4">Xa xa, phía sau những ngọn núi chữ, xa các quốc gia Vokalia và Consonantia, có những văn bản mù.</p>
-                                        <div class="d-flex align-items-center">
-                                            <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                                            <div class="pl-3">
-                                                <p class="name">Roger Scott</p>
-                                                <span class="position">Quản lý Tiếp thị</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+       
 
         <section class="ftco-section">
             <div class="container">
@@ -573,7 +332,7 @@
         <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
         <%@ include file="/views/common/script.jsp" %>
-       
+
 
     </body>
 </html>

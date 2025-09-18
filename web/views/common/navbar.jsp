@@ -8,12 +8,12 @@
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto align-items-center">
-                <li class="nav-item"><a href="index.jsp" class="nav-link">Trang chủ</a></li>
-                <li class="nav-item"><a href="about.jsp" class="nav-link">Giới thiệu</a></li>
-                <li class="nav-item"><a href="destination.jsp" class="nav-link">Điểm đến</a></li>
-                <li class="nav-item"><a href="hotel.jsp" class="nav-link">Khách sạn</a></li>
-                <li class="nav-item"><a href="blog.jsp" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="contact.jsp" class="nav-link">Liên hệ</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/ListIslandController" class="nav-link">Trang chủ</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/views/home/about.jsp" class="nav-link">Giới thiệu</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/views/home/destination.jsp" class="nav-link">Điểm đến</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/views/home/hotel.jsp" class="nav-link">Khách sạn</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/views/home/blog.jsp" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="${pageContext.request.contextPath}/views/home/contact.jsp" class="nav-link">Liên hệ</a></li>
                 <!-- Thêm nút đăng nhập / đăng ký -->
                 <li class="nav-item ml-2">
                     <a href="login.jsp" class="btn btn-success">Đăng nhập</a>

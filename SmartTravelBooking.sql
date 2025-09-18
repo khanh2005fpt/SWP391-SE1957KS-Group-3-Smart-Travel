@@ -35,6 +35,7 @@ CREATE TABLE Islands (
     activities TEXT,
     imageUrl VARCHAR(255)
 );
+select * from Islands where 1=1 and islandName like 'Phu Quoc'
 go
 
 -- Bảng Hotels

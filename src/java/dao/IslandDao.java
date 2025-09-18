@@ -41,9 +41,55 @@ public class IslandDao extends DBContext {
         return list;
     }
 
+    public List<Island> searchIslands(String name, String country, String season) {
+        List<Island> list = new ArrayList<>();
+        String sql = "SELECT * FROM Islands WHERE 1=1";
+
+        if (name != null && !name.isEmpty()) {
+            sql += " AND islandName LIKE ?";
+        }
+        if (country != null && !country.isEmpty()) {
+            sql += " AND country LIKE ?";
+        }
+        if (season != null && !season.isEmpty()) {
+            sql += " AND bestSeason = ?";
+        }
+
+        try {
+            PreparedStatement ps = connection.prepareStatement(sql);
+         
+            int idx = 1;
+            if (name != null && !name.isEmpty()) {
+                ps.setString(idx++, "%" + name + "%");
+            }
+            if (country != null && !country.isEmpty()) {
+                ps.setString(idx++, "%" + country + "%");
+            }
+            if (season != null && !season.isEmpty()) {
+                ps.setString(idx++, season);
+            }
+
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new Island(
+                        rs.getInt("islandId"),
+                        rs.getString("islandName"),
+                        rs.getString("country"),
+                        rs.getString("description"),
+                        rs.getString("bestSeason"),
+                        rs.getString("activities"),
+                        rs.getString("imageUrl")
+                ));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
     public static void main(String[] args) {
         IslandDao id = new IslandDao();
-        List<Island> i = id.getIslands();
+        List<Island> i = id.searchIslands("Phu Quoc", "Vietnam", "July-Apr");
         System.out.println(i.toString());
     }
 }
