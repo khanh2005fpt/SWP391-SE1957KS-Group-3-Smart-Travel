@@ -1,35 +1,15 @@
 <!DOCTYPE html>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html lang="vi">
     <head>
-        <title>Smart Ticket Booking</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <link rel="stylesheet" href="css/animate.css">
-
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="css/magnific-popup.css">
-
-        <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-        <link rel="stylesheet" href="css/jquery.timepicker.css">
-
-
-        <link rel="stylesheet" href="css/flaticon.css">
-        <link rel="stylesheet" href="css/style.css">
+        <%@ include file="/views/common/css.jsp" %>
     </head>
     <body>
         <%@ include file="/views/common/navbar.jsp" %>
         <!-- KẾT THÚC nav -->
 
-        <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_5.jpg');">
+        <div class="hero-wrap js-fullheight" style="background-image: url('${pageContext.request.contextPath}/views/home/images/bg_5.jpg');">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
@@ -220,7 +200,7 @@
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                                <div class="services services-1 color-1 d-block img" style="background-image: url(images/services-1.jpg);">
+                                <div class="services services-1 color-1 d-block img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/services-1.jpg);">
                                     <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-paragliding"></span></div>
                                     <div class="media-body">
                                         <h3 class="heading mb-3">Hoạt động</h3>
@@ -229,7 +209,7 @@
                                 </div>      
                             </div>
                             <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                                <div class="services services-1 color-2 d-block img" style="background-image: url(images/services-2.jpg);">
+                                <div class="services services-1 color-2 d-block img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/services-2.jpg);">
                                     <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
                                     <div class="media-body">
                                         <h3 class="heading mb-3">Sắp xếp chuyến đi</h3>
@@ -238,7 +218,7 @@
                                 </div>    
                             </div>
                             <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                                <div class="services services-1 color-3 d-block img" style="background-image: url(images/services-3.jpg);">
+                                <div class="services services-1 color-3 d-block img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/services-3.jpg);">
                                     <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-tour-guide"></span></div>
                                     <div class="media-body">
                                         <h3 class="heading mb-3">Hướng dẫn viên riêng</h3>
@@ -247,7 +227,7 @@
                                 </div>      
                             </div>
                             <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                                <div class="services services-1 color-4 d-block img" style="background-image: url(images/services-4.jpg);">
+                                <div class="services services-1 color-4 d-block img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/services-4.jpg);">
                                     <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-map"></span></div>
                                     <div class="media-body">
                                         <h3 class="heading mb-3">Quản lý địa điểm</h3>
@@ -261,7 +241,7 @@
             </div>
         </section>
 
-        <section class="ftco-section img ftco-select-destination" style="background-image: url(images/bg_3.jpg);">
+        <section class="ftco-section img ftco-select-destination" style="background-image: url(${pageContext.request.contextPath}/views/home/images/bg_3.jpg);">
             <div class="container">
                 <div class="row justify-content-center pb-4">
                     <div class="col-md-12 heading-section text-center ftco-animate">
@@ -276,7 +256,7 @@
                         <div class="carousel-destination owl-carousel ftco-animate">
                             <div class="item">
                                 <div class="project-destination">
-                                    <a href="#" class="img" style="background-image: url(images/place-1.jpg);">
+                                    <a href="#" class="img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/place-1.jpg);">
                                         <div class="text">
                                             <h3>Philippines</h3>
                                             <span>8 Tour</span>
@@ -286,7 +266,7 @@
                             </div>
                             <div class="item">
                                 <div class="project-destination">
-                                    <a href="#" class="img" style="background-image: url(images/place-2.jpg);">
+                                    <a href="#" class="img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/place-2.jpg);">
                                         <div class="text">
                                             <h3>Canada</h3>
                                             <span>2 Tour</span>
@@ -296,7 +276,7 @@
                             </div>
                             <div class="item">
                                 <div class="project-destination">
-                                    <a href="#" class="img" style="background-image: url(images/place-3.jpg);">
+                                    <a href="#" class="img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/place-3.jpg);">
                                         <div class="text">
                                             <h3>Thái Lan</h3>
                                             <span>5 Tour</span>
@@ -306,7 +286,7 @@
                             </div>
                             <div class="item">
                                 <div class="project-destination">
-                                    <a href="#" class="img" style="background-image: url(images/place-4.jpg);">
+                                    <a href="#" class="img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/place-4.jpg);">
                                         <div class="text">
                                             <h3>Úc</h3>
                                             <span>5 Tour</span>
@@ -316,7 +296,7 @@
                             </div>
                             <div class="item">
                                 <div class="project-destination">
-                                    <a href="#" class="img" style="background-image: url(images/place-5.jpg);">
+                                    <a href="#" class="img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/place-5.jpg);">
                                         <div class="text">
                                             <h3>Hy Lạp</h3>
                                             <span>7 Tour</span>
@@ -339,114 +319,24 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 ftco-animate">
-                        <div class="project-wrap">
-                            <a href="#" class="img" style="background-image: url(images/destination-1.jpg);">
-                                <span class="price">$550/người</span>
-                            </a>
-                            <div class="text p-4">
-                                <span class="days">Tour 8 Ngày</span>
-                                <h3><a href="#">Ruộng bậc thang Banaue</a></h3>
-                                <p class="location"><span class="fa fa-map-marker"></span> Banaue, Ifugao, Philippines</p>
-                                <ul>
-                                    <li><span class="flaticon-shower"></span>2</li>
-                                    <li><span class="flaticon-king-size"></span>3</li>
-                                    <li><span class="flaticon-mountains"></span>Gần Núi</li>
-                                </ul>
+                    <c:forEach var="island" items="${islands}">
+                        <div class="col-md-4 ftco-animate">
+                            <div class="project-wrap">
+                                <a href="#" class="img" style="background-image: url('${pageContext.request.contextPath}/${island.imageUrl}');"></a>
+                                <div class="text p-4">
+                                    <h3><a href="#">${island.islandName}</a></h3>
+                                    <p class="location"><span class="fa fa-map-marker"></span> ${island.country}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 ftco-animate">
-                        <div class="project-wrap">
-                            <a href="#" class="img" style="background-image: url(images/destination-2.jpg);">
-                                <span class="price">$550/người</span>
-                            </a>
-                            <div class="text p-4">
-                                <span class="days">Tour 10 Ngày</span>
-                                <h3><a href="#">Ruộng bậc thang Banaue</a></h3>
-                                <p class="location"><span class="fa fa-map-marker"></span> Banaue, Ifugao, Philippines</p>
-                                <ul>
-                                    <li><span class="flaticon-shower"></span>2</li>
-                                    <li><span class="flaticon-king-size"></span>3</li>
-                                    <li><span class="flaticon-sun-umbrella"></span>Gần Bãi Biển</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 ftco-animate">
-                        <div class="project-wrap">
-                            <a href="#" class="img" style="background-image: url(images/destination-3.jpg);">
-                                <span class="price">$550/người</span>
-                            </a>
-                            <div class="text p-4">
-                                <span class="days">Tour 7 Ngày</span>
-                                <h3><a href="#">Ruộng bậc thang Banaue</a></h3>
-                                <p class="location"><span class="fa fa-map-marker"></span> Banaue, Ifugao, Philippines</p>
-                                <ul>
-                                    <li><span class="flaticon-shower"></span>2</li>
-                                    <li><span class="flaticon-king-size"></span>3</li>
-                                    <li><span class="flaticon-sun-umbrella"></span>Gần Bãi Biển</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    </c:forEach>
 
-                    <div class="col-md-4 ftco-animate">
-                        <div class="project-wrap">
-                            <a href="#" class="img" style="background-image: url(images/destination-4.jpg);">
-                                <span class="price">$550/người</span>
-                            </a>
-                            <div class="text p-4">
-                                <span class="days">Tour 8 Ngày</span>
-                                <h3><a href="#">Ruộng bậc thang Banaue</a></h3>
-                                <p class="location"><span class="fa fa-map-marker"></span> Banaue, Ifugao, Philippines</p>
-                                <ul>
-                                    <li><span class="flaticon-shower"></span>2</li>
-                                    <li><span class="flaticon-king-size"></span>3</li>
-                                    <li><span class="flaticon-sun-umbrella"></span>Gần Bãi Biển</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 ftco-animate">
-                        <div class="project-wrap">
-                            <a href="#" class="img" style="background-image: url(images/destination-5.jpg);">
-                                <span class="price">$550/người</span>
-                            </a>
-                            <div class="text p-4">
-                                <span class="days">Tour 10 Ngày</span>
-                                <h3><a href="#">Ruộng bậc thang Banaue</a></h3>
-                                <p class="location"><span class="fa fa-map-marker"></span> Banaue, Ifugao, Philippines</p>
-                                <ul>
-                                    <li><span class="flaticon-shower"></span>2</li>
-                                    <li><span class="flaticon-king-size"></span>3</li>
-                                    <li><span class="flaticon-sun-umbrella"></span>Gần Bãi Biển</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 ftco-animate">
-                        <div class="project-wrap">
-                            <a href="#" class="img" style="background-image: url(images/destination-6.jpg);">
-                                <span class="price">$550/người</span>
-                            </a>
-                            <div class="text p-4">
-                                <span class="days">Tour 7 Ngày</span>
-                                <h3><a href="#">Ruộng bậc thang Banaue</a></h3>
-                                <p class="location"><span class="fa fa-map-marker"></span> Banaue, Ifugao, Philippines</p>
-                                <ul>
-                                    <li><span class="flaticon-shower"></span>2</li>
-                                    <li><span class="flaticon-king-size"></span>3</li>
-                                    <li><span class="flaticon-sun-umbrella"></span>Gần Bãi Biển</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
 
-        <section class="ftco-section ftco-about img" style="background-image: url(images/bg_4.jpg);">
+        <section class="ftco-section ftco-about img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/bg_4.jpg);">
             <div class="overlay"></div>
             <div class="container py-md-5">
                 <div class="row py-md-5">
@@ -465,7 +355,7 @@
                     <div class="col-md-12 about-intro">
                         <div class="row">
                             <div class="col-md-6 d-flex align-items-stretch">
-                                <div class="img d-flex w-100 align-items-center justify-content-center" style="background-image:url(images/about-1.jpg);">
+                                <div class="img d-flex w-100 align-items-center justify-content-center" style="background-image:url(${pageContext.request.contextPath}/views/home/images/about-1.jpg);">
                                 </div>
                             </div>
                             <div class="col-md-6 pl-md-5 py-5">
@@ -484,7 +374,7 @@
             </div>
         </section>
 
-        <section class="ftco-section testimony-section bg-bottom" style="background-image: url(images/bg_1.jpg);">
+        <section class="ftco-section testimony-section bg-bottom" style="background-image: url(${pageContext.request.contextPath}/views/home/images/bg_1.jpg);">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row justify-content-center pb-4">
@@ -508,7 +398,7 @@
                                         </p>
                                         <p class="mb-4">Xa xa, phía sau những ngọn núi chữ, xa các quốc gia Vokalia và Consonantia, có những văn bản mù.</p>
                                         <div class="d-flex align-items-center">
-                                            <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                                            <div class="user-img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/person_1.jpg)"></div>
                                             <div class="pl-3">
                                                 <p class="name">Roger Scott</p>
                                                 <span class="position">Quản lý Tiếp thị</span>
@@ -529,7 +419,7 @@
                                         </p>
                                         <p class="mb-4">Xa xa, phía sau những ngọn núi chữ, xa các quốc gia Vokalia và Consonantia, có những văn bản mù.</p>
                                         <div class="d-flex align-items-center">
-                                            <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                                            <div class="user-img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/person_2.jpg)"></div>
                                             <div class="pl-3">
                                                 <p class="name">Roger Scott</p>
                                                 <span class="position">Quản lý Tiếp thị</span>
@@ -550,7 +440,7 @@
                                         </p>
                                         <p class="mb-4">Xa xa, phía sau những ngọn núi chữ, xa các quốc gia Vokalia và Consonantia, có những văn bản mù.</p>
                                         <div class="d-flex align-items-center">
-                                            <div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
+                                            <div class="user-img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/person_3.jpg)"></div>
                                             <div class="pl-3">
                                                 <p class="name">Roger Scott</p>
                                                 <span class="position">Quản lý Tiếp thị</span>
@@ -559,27 +449,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="testimony-wrap py-4">
-                                    <div class="text">
-                                        <p class="star">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </p>
-                                        <p class="mb-4">Xa xa, phía sau những ngọn núi chữ, xa các quốc gia Vokalia và Consonantia, có những văn bản mù.</p>
-                                        <div class="d-flex align-items-center">
-                                            <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                                            <div class="pl-3">
-                                                <p class="name">Roger Scott</p>
-                                                <span class="position">Quản lý Tiếp thị</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                          
                             <div class="item">
                                 <div class="testimony-wrap py-4">
                                     <div class="text">
@@ -618,7 +488,7 @@
                 <div class="row d-flex">
                     <div class="col-md-4 d-flex ftco-animate">
                         <div class="blog-entry justify-content-end">
-                            <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+                            <a href="blog-single.html" class="block-20" style="background-image: url('${pageContext.request.contextPath}/views/home/images/image_1.jpg');">
                             </a>
                             <div class="text">
                                 <div class="d-flex align-items-center mb-4 topp">
@@ -638,7 +508,7 @@
                     </div>
                     <div class="col-md-4 d-flex ftco-animate">
                         <div class="blog-entry justify-content-end">
-                            <a href="blog-single.jsp" class="block-20" style="background-image: url('images/image_2.jpg');">
+                            <a href="blog-single.jsp" class="block-20" style="background-image: url('${pageContext.request.contextPath}/views/home/images/image_2.jpg');">
                             </a>
                             <div class="text">
                                 <div class="d-flex align-items-center mb-4 topp">
@@ -658,7 +528,7 @@
                     </div>
                     <div class="col-md-4 d-flex ftco-animate">
                         <div class="blog-entry">
-                            <a href="blog-single.jsp" class="block-20" style="background-image: url('images/image_3.jpg');">
+                            <a href="blog-single.jsp" class="block-20" style="background-image: url('${pageContext.request.contextPath}/views/home/images/image_3.jpg');">
                             </a>
                             <div class="text">
                                 <div class="d-flex align-items-center mb-4 topp">
@@ -684,7 +554,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-12 text-center">
-                        <div class="img" style="background-image: url(images/bg_2.jpg);">
+                        <div class="img" style="background-image: url(${pageContext.request.contextPath}/views/home/images/bg_2.jpg);">
                             <div class="overlay"></div>
                             <h2>Chúng tôi là Pacific - Công ty Du lịch</h2>
                             <p>Chúng tôi có thể quản lý giấc mơ xây dựng của bạn. Một con sông nhỏ tên là Duden chảy qua nơi họ ở.</p>
@@ -702,22 +572,8 @@
         <!-- loader -->
         <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jquery-migrate-3.0.1.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.easing.1.3.js"></script>
-        <script src="js/jquery.waypoints.min.js"></script>
-        <script src="js/jquery.stellar.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/jquery.animateNumber.min.js"></script>
-        <script src="js/bootstrap-datepicker.js"></script>
-        <script src="js/scrollax.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-        <script src="js/google-map.js"></script>
-        <script src="js/main.js"></script>
+        <%@ include file="/views/common/script.jsp" %>
+       
 
     </body>
 </html>
